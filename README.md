@@ -1,4 +1,5 @@
 SentinelNet: AI-Powered Network Intrusion Detection System (NIDS)
+#http://localhost:8501/
 
 With the rapid growth of digital infrastructure and network-based applications, cybersecurity threats have become increasingly sophisticated and frequent. Traditional security mechanisms such as firewalls and signature-based intrusion detection systems (IDS) are often insufficient to detect modern and evolving cyberattacks. These systems rely heavily on predefined rules and known attack signatures, making them ineffective against zero-day attacks and novel intrusion patterns.
 
