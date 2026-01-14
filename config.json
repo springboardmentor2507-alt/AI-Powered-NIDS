@@ -1,0 +1,50 @@
+{
+  "system": {
+    "name": "SentinelNet NIDS",
+    "version": "1.0.0",
+    "description": "AI-Powered Network Intrusion Detection System"
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 5000,
+    "debug": true
+  },
+  "monitoring": {
+    "auto_start": false,
+    "refresh_interval_seconds": 5,
+    "packet_generation_interval": [0.5, 2.0],
+    "max_alerts_stored": 50
+  },
+  "ml_models": {
+    "default_model": "random_forest",
+    "models": {
+      "random_forest": {
+        "accuracy": 0.96,
+        "n_estimators": 100
+      },
+      "svm": {
+        "accuracy": 0.94,
+        "kernel": "rbf"
+      },
+      "neural_network": {
+        "accuracy": 0.97,
+        "layers": [128, 64, 32]
+      }
+    }
+  },
+  "simulation": {
+    "attack_types": ["Normal", "DoS", "Probe", "R2L", "U2R", "DDoS"],
+    "attack_probabilities": [0.7, 0.1, 0.08, 0.05, 0.02, 0.05],
+    "severity_levels": ["Low", "Medium", "High", "Critical"],
+    "ip_ranges": {
+      "source": "192.168.0.0/16",
+      "destination": "10.0.0.0/8"
+    },
+    "common_ports": [80, 443, 22, 3389, 8080, 21, 25, 53]
+  },
+  "alerts": {
+    "high_severity_threshold": ["High", "Critical"],
+    "notification_enabled": false,
+    "log_to_file": false
+  }
+}
